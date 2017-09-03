@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oRQ-OT-zhX">
+                                <rect key="frame" x="56" y="28" width="263" height="263"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oRQ-OT-zhX" secondAttribute="height" multiplier="1:1" id="Cku-qf-zXh"/>
+                                    <constraint firstAttribute="height" constant="263" id="WrC-wu-egP"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Lvl-gw-iff">
+                                <rect key="frame" x="169" y="141" width="37" height="37"/>
+                                <color key="color" red="0.66873830619999997" green="0.66873830619999997" blue="0.66873830619999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDY-Ow-gLT">
+                                <rect key="frame" x="56" y="301" width="263" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QhV-Ly-B7U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Italic" family="Gill Sans" pointSize="20"/>
+                                <color key="textColor" red="0.28526304359999999" green="0.58871377229999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ewR-jY-A88">
+                                <rect key="frame" x="56" y="342" width="263" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6gt-Lx-oj0">
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7w-dd-6Pj">
+                                                <rect key="frame" x="0.0" y="0.0" width="74.5" height="24"/>
+                                                <state key="normal" image="play"/>
+                                                <state key="selected" image="pause"/>
+                                                <connections>
+                                                    <action selector="playAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UX4-RC-WxA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYX-4D-sS9">
+                                                <rect key="frame" x="94.5" y="0.0" width="74" height="24"/>
+                                                <state key="normal" image="stop"/>
+                                                <connections>
+                                                    <action selector="stopAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lal-yK-Uo0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWf-QF-Kia">
+                                                <rect key="frame" x="188.5" y="0.0" width="74.5" height="24"/>
+                                                <state key="normal" image="shuffle"/>
+                                                <connections>
+                                                    <action selector="shuffleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcY-Uq-vul"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="u7L-6S-Ixj">
+                                        <rect key="frame" x="-2" y="24" width="267" height="57"/>
+                                        <connections>
+                                            <action selector="changeVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="eKa-gs-S6d"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Du1-Lm-Tpo"/>
+                                </constraints>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="md8-9e-yNl">
+                                <rect key="frame" x="0.0" y="430" width="375" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="e7i-Ic-yps"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jL5-Sn-aP5"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="T4t-GS-Hec"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XDY-Ow-gLT" firstAttribute="width" secondItem="oRQ-OT-zhX" secondAttribute="width" id="05c-lW-sAd"/>
+                            <constraint firstItem="md8-9e-yNl" firstAttribute="top" secondItem="ewR-jY-A88" secondAttribute="bottom" constant="8" id="DwK-7V-6Ya"/>
+                            <constraint firstItem="ewR-jY-A88" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IxS-ne-5UV"/>
+                            <constraint firstItem="XDY-Ow-gLT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JSB-aF-FWf"/>
+                            <constraint firstItem="ewR-jY-A88" firstAttribute="width" secondItem="oRQ-OT-zhX" secondAttribute="width" id="JrG-Ar-SVS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oRQ-OT-zhX" secondAttribute="trailing" constant="40" id="LTc-Oi-dag"/>
+                            <constraint firstItem="Lvl-gw-iff" firstAttribute="centerX" secondItem="oRQ-OT-zhX" secondAttribute="centerX" id="Mku-Bj-grO"/>
+                            <constraint firstItem="ewR-jY-A88" firstAttribute="top" secondItem="XDY-Ow-gLT" secondAttribute="bottom" constant="20" id="NWL-0n-ZOX"/>
+                            <constraint firstItem="oRQ-OT-zhX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="Rq5-GL-M0B"/>
+                            <constraint firstItem="md8-9e-yNl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SLP-LZ-pq6"/>
+                            <constraint firstItem="oRQ-OT-zhX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="dsz-A1-ube"/>
+                            <constraint firstItem="oRQ-OT-zhX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eKP-Lp-hSP"/>
+                            <constraint firstAttribute="trailing" secondItem="md8-9e-yNl" secondAttribute="trailing" id="iib-uD-kjo"/>
+                            <constraint firstItem="XDY-Ow-gLT" firstAttribute="top" secondItem="oRQ-OT-zhX" secondAttribute="bottom" constant="10" id="met-zN-0ce"/>
+                            <constraint firstItem="Lvl-gw-iff" firstAttribute="centerY" secondItem="oRQ-OT-zhX" secondAttribute="centerY" id="zLP-3N-vnK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coverImage" destination="oRQ-OT-zhX" id="Q8E-na-xVu"/>
+                        <outlet property="indicatorView" destination="Lvl-gw-iff" id="fuO-zH-alx"/>
+                        <outlet property="playButton" destination="m7w-dd-6Pj" id="tnG-38-2sq"/>
+                        <outlet property="shuffleButton" destination="IWf-QF-Kia" id="KIe-6j-rXX"/>
+                        <outlet property="songSelector" destination="md8-9e-yNl" id="trU-MU-Lrv"/>
+                        <outlet property="songTittle" destination="XDY-Ow-gLT" id="OTB-mM-B8b"/>
+                        <outlet property="stopButton" destination="fYX-4D-sS9" id="AgR-w6-5mf"/>
+                        <outlet property="volumeSlider" destination="u7L-6S-Ixj" id="hRY-wy-xch"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause" width="24" height="24"/>
+        <image name="play" width="24" height="24"/>
+        <image name="shuffle" width="24" height="24"/>
+        <image name="stop" width="24" height="24"/>
+    </resources>
+</document>
